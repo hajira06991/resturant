@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L'Étoile Dorée — Fine Dining · Paris VIII</title>
+  <meta name="description" content="L'Étoile Dorée. An intimate sanctuary of elevated French gastronomy in the heart of Paris. Reserve your table."/>
+  <!-- OG -->
+  <meta property="og:title" content="L'Étoile Dorée — Fine Dining Paris"/>
+  <meta property="og:description" content="An intimate sanctuary of elevated French gastronomy."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <!-- Icons -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>✦</text></svg>"/>
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div id="scrollProgress"></div>
+
+<!-- PRELOADER -->
+<div id="preloader" class="preloader">
+  <div class="preloader-logo">
+    <span>L'</span><span>Étoile</span> <span>&nbsp;Dorée</span>
+  </div>
+  <div class="pre-line"></div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+  <span id="lightboxClose" class="lightbox-close" aria-label="Close lightbox">&times;</span>
+  <span id="lightboxPrev" class="lightbox-prev" aria-label="Previous image"><i class="fa fa-chevron-left"></i></span>
+  <img id="lightboxImg" class="lightbox-img" src="" alt="Gallery image"/>
+  <span id="lightboxNext" class="lightbox-next" aria-label="Next image"><i class="fa fa-chevron-right"></i></span>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="backTop" class="back-top" aria-label="Back to top">
+  <i class="fa fa-chevron-up"></i>
+</button>
+
+<!-- ══════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════ -->
+<header id="siteHeader" class="site-header">
+  <nav class="nav-wrap" role="navigation" aria-label="Main navigation">
+    <a href="#home-page" class="nav-logo" data-target="home-page">
+      L'<em>Étoile</em> Dorée
+    </a>
+    <div class="desktop-nav">
+      <a class="nav-link active" data-target="home-page" href="#">Home</a>
+      <a class="nav-link" data-target="menu-page" href="#">Menu</a>
+      <a class="nav-link" data-target="gallery-page" href="#">Gallery</a>
+      <a class="nav-link" data-target="about-page" href="#">About</a>
+      <a class="nav-link" data-target="contact-page" href="#">Contact</a>
+      <a class="nav-book nav-link" data-target="reservation-page" href="#">Reserve</a>
+    </div>
+    <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile overlay -->
+<div id="mobileOverlay" class="mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a class="mobile-link" data-target="home-page" href="#">Home</a>
+  <a class="mobile-link" data-target="menu-page" href="#">Menu</a>
+  <a class="mobile-link" data-target="gallery-page" href="#">Gallery</a>
+  <a class="mobile-link" data-target="about-page" href="#">About</a>
+  <a class="mobile-link" data-target="contact-page" href="#">Contact</a>
+  <a class="mobile-link" data-target="reservation-page" href="#">Reserve a Table</a>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════ -->
+<main id="home-page" class="page-view active-view">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1920">
+        <source src="https://cdn.coverr.co/videos/coverr-fine-dining-restaurant-4015/1080p.mp4" type="video/mp4"/>
+      </video>
+    </div>
+    <!-- Fallback for video -->
+    <div class="hero-fallback-img" aria-hidden="true"></div>
+
+    <!-- Decorative SVG ornament -->
+    <div class="hero-ornament" aria-hidden="true">
+      <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="110" cy="110" r="100" stroke-width=".6" stroke-dasharray="4 6"/>
+        <circle cx="110" cy="110" r="70" stroke-width=".4"/>
+        <circle cx="110" cy="110" r="4" fill="currentColor" stroke="none" style="color:#c9a84c"/>
+        <line x1="110" y1="10" x2="110" y2="210" stroke-width=".4"/>
+        <line x1="10" y1="110" x2="210" y2="110" stroke-width=".4"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-label" data-reveal="fade">Paris VIII · Est. 1987</p>
+      <h1 class="hero-title" data-reveal="up" data-delay="100">
+        Where Every Dish<br/>
+        <em>Tells a Story</em>
+      </h1>
+      <p class="hero-sub" data-reveal="up" data-delay="220">
+        An intimate sanctuary where classical French technique meets the quiet confidence of a kitchen that has nothing left to prove.
+      </p>
+      <div class="hero-actions" data-reveal="up" data-delay="340">
+        <a class="btn-gold" data-target="reservation-page" href="#">
+          Reserve a Table
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+        </a>
+        <a class="btn-ghost" data-target="menu-page" href="#">Explore the Menu</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS TICKER -->
+  <div class="stats-bar" aria-hidden="true">
+    <div class="stats-track">
+      <div class="stat-item">
+        <div>
+          <div class="stat-num">37</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat-dot"></div>
+      </div>
+      <div class="stat-item">
+        <div>
+          <div class="stat-num">2★</div>
+          <div class="stat-label">Michelin Stars</div>
+        </div>
+        <div class="stat-dot"></div>
+      </div>
+      <div class="stat-item">
+        <div>
+          <div class="stat-num">18</div>
+          <div class="stat-label">Seasonal Dishes</div>
+        </div>
+        <div class="stat-dot"></div>
+      </div>
+      <div class="stat-item">
+        <div>
+          <div class="stat-num">4200+</div>
+          <div class="stat-label">Wine Labels</div>
+        </div>
+        <div class="stat-dot"></div>
+      </div>
+      <div class="stat-item">
+        <div>
+          <div class="stat-num">24</div>
+          <div class="stat-label">Intimate Covers</div>
+        </div>
+        <div class="stat-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT TEASER -->
+  <section class="about-section section-pad">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-visual">
+          <img data-reveal="left"
+               class="about-img-main"
+               src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=800"
+               alt="Chef preparing a dish in the L'Étoile Dorée kitchen"/>
+          <img class="about-img-accent"
+               src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=600"
+               alt="Plated fine dining dish at L'Étoile Dorée"/>
+          <div class="about-badge">
+            <strong>37</strong>
+            <span>Years in Paris</span>
+          </div>
+        </div>
+        <div class="about-text-block">
+          <span class="eyebrow" data-reveal="fade">Our Philosophy</span>
+          <h2 class="display-title" data-reveal="up">
+            Craft Without<br/><em>Compromise</em>
+          </h2>
+          <div class="gold-rule" data-reveal="fade" data-delay="100"></div>
+          <p class="body-text" data-reveal="up" data-delay="120">
+            L'Étoile Dorée was born from a single conviction: that French cuisine, at its most honest, needs no spectacle. Only intention. Our kitchen has never chased trends — it has quietly set them.
+          </p>
+          <blockquote class="about-pull-quote" data-reveal="right" data-delay="200">
+            "The table is where memory is made. We are merely the architects of the moment."
+          </blockquote>
+          <p class="body-text" data-reveal="up" data-delay="240">
+            Every plate that leaves our kitchen carries the weight of decades — of relationships with farmers in Brittany, truffle hunters in Périgord, and fishermen on the Normandy coast.
+          </p>
+          <div class="awards-row" data-reveal="up" data-delay="300">
+            <span class="award-chip">✦ 2 Michelin Stars</span>
+            <span class="award-chip">Gault &amp; Millau 19/20</span>
+            <span class="award-chip">Top 50 Europe</span>
+          </div>
+          <div style="margin-top:40px;" data-reveal="up" data-delay="360">
+            <a class="btn-ghost-light" data-target="about-page" href="#">Read Our Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEF SECTION -->
+  <section class="chef-section section-pad">
+    <div class="wrap">
+      <div class="chef-grid">
+        <div class="chef-portrait-wrap" data-reveal="left">
+          <img class="chef-portrait"
+               src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800"
+               alt="Executive Chef Julien Moreau of L'Étoile Dorée"/>
+          <div class="chef-portrait-frame"></div>
+          <div class="chef-award-strip">
+            <div class="award-chip" style="display:inline-flex;">✦ Chef of the Year 2023 — Le Guide Culinaire</div>
+          </div>
+        </div>
+        <div class="chef-text">
+          <span class="eyebrow" data-reveal="fade">The Mind Behind the Menu</span>
+          <h2 class="chef-name" data-reveal="up">
+            Chef Julien<br/><em>Moreau</em>
+          </h2>
+          <p class="chef-title-role" data-reveal="fade" data-delay="80">Executive Chef &amp; Co-Proprietor</p>
+          <div class="gold-rule" data-reveal="fade" data-delay="100"></div>
+          <p class="chef-bio" data-reveal="up" data-delay="140">
+            Julien Moreau spent his formative years between the markets of Lyon and the kitchens of Alain Ducasse, learning that restraint is the most difficult technique to master. He returned to Paris at thirty-two, took the helm of L'Étoile Dorée, and within four years earned its second Michelin star.
+          </p>
+          <p class="chef-bio" data-reveal="up" data-delay="180">
+            His cooking is personal — shaped by a childhood in coastal Brittany, an obsession with heritage seed varieties, and a belief that the finest ingredient is always the one coaxed from a relationship built over years, not transactions.
+          </p>
+          <div class="chef-signature" data-reveal="fade" data-delay="240" aria-label="Julien Moreau signature">
+            Julien Moreau
+          </div>
+          <div class="chef-credentials" data-reveal="up" data-delay="280">
+            <div class="chef-cred">
+              <div class="chef-cred-val">22</div>
+              <div class="chef-cred-key">Years in Professional Kitchens</div>
+            </div>
+            <div class="chef-cred">
+              <div class="chef-cred-val">3</div>
+              <div class="chef-cred-key">Published Works on French Terroir</div>
+            </div>
+            <div class="chef-cred">
+              <div class="chef-cred-val">11</div>
+              <div class="chef-cred-key">International Guest Residencies</div>
+            </div>
+            <div class="chef-cred">
+              <div class="chef-cred-val">★★</div>
+              <div class="chef-cred-key">Michelin Stars Held</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE DISHES PREVIEW -->
+  <section class="dishes-section section-pad">
+    <div class="wrap-wide">
+      <div class="dishes-header">
+        <div>
+          <span class="eyebrow" data-reveal="fade">Signature Dishes</span>
+          <h2 class="display-title" data-reveal="up">The Season's<br/><em>Finest Plates</em></h2>
+        </div>
+        <a class="btn-ghost-light" data-target="menu-page" href="#" data-reveal="right">Full Menu</a>
+      </div>
+      <div class="dishes-grid">
+        <!-- Dish 1 -->
+        <article class="dish-card" data-reveal="up" data-delay="0">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800"
+               alt="Brittany Lobster with saffron beurre blanc"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Signature · Seafood</div>
+            <h3 class="dish-name">Brittany Lobster</h3>
+            <p class="dish-desc">Saffron beurre blanc, sea vegetables, micro herbs from our kitchen garden.</p>
+            <div class="dish-price">
+              <span class="dish-price-val">€ 88</span>
+              <span class="dish-arrow">→</span>
+            </div>
+          </div>
+        </article>
+        <!-- Dish 2 -->
+        <article class="dish-card" data-reveal="up" data-delay="100">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=800"
+               alt="Périgord Black Truffle risotto"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Chef's Selection · Seasonal</div>
+            <h3 class="dish-name">Périgord Black Truffle</h3>
+            <p class="dish-desc">24-month aged Comté, Jerusalem artichoke velouté, crisp rye wafer.</p>
+            <div class="dish-price">
+              <span class="dish-price-val">€ 120</span>
+              <span class="dish-arrow">→</span>
+            </div>
+          </div>
+        </article>
+        <!-- Dish 3 -->
+        <article class="dish-card" data-reveal="up" data-delay="200">
+          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=800"
+               alt="Duck Confit with fig gastrique"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Classic · Main Course</div>
+            <h3 class="dish-name">Landes Duck Confit</h3>
+            <p class="dish-desc">Fig gastrique, celeriac mousseline, caramelised shallot tatin.</p>
+            <div class="dish-price">
+              <span class="dish-price-val">€ 64</span>
+              <span class="dish-arrow">→</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="experience-section section-pad">
+    <div class="wrap-wide">
+      <div style="text-align:center;">
+        <span class="eyebrow" data-reveal="fade">What We Offer</span>
+        <h2 class="display-title" data-reveal="up" style="text-align:center;">An Experience<br/><em>Beyond the Plate</em></h2>
+      </div>
+      <div class="experience-grid">
+        <div class="exp-card" data-reveal="up" data-delay="0">
+          <div class="exp-num">01</div>
+          <div class="exp-icon">
+            <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M26 4C14 4 4 14 4 26s10 22 22 22 22-10 22-22S38 4 26 4z"/>
+              <path d="M26 16v10l7 4"/>
+            </svg>
+          </div>
+          <h3 class="exp-title">Fine Dining Experience</h3>
+          <p class="exp-body">A multi-course tasting menu that unfolds like a conversation — unhurried, considered, and impossible to forget. Available Tuesday through Saturday evenings.</p>
+          <span class="exp-link" data-target="reservation-page">Reserve Now →</span>
+        </div>
+        <div class="exp-card" data-reveal="up" data-delay="120">
+          <div class="exp-num">02</div>
+          <div class="exp-icon">
+            <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2">
+              <rect x="8" y="16" width="36" height="26" rx="2"/>
+              <path d="M16 16v-4a10 10 0 0 1 20 0v4"/>
+              <circle cx="26" cy="29" r="4"/>
+            </svg>
+          </div>
+          <h3 class="exp-title">Private Events</h3>
+          <p class="exp-body">The Salon Privé accommodates up to twelve guests in absolute discretion. Corporate dinners, proposals, anniversaries — each occasion shaped entirely around you.</p>
+          <span class="exp-link" data-target="contact-page">Enquire →</span>
+        </div>
+        <div class="exp-card" data-reveal="up" data-delay="240">
+          <div class="exp-num">03</div>
+          <div class="exp-icon">
+            <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M12 40V24l14-16 14 16v16"/>
+              <path d="M20 40v-10h12v10"/>
+              <path d="M8 40h36"/>
+            </svg>
+          </div>
+          <h3 class="exp-title">Wine Collection</h3>
+          <p class="exp-body">Over 4,200 labels curated across four decades. Our sommelier, Marie Castillon, pairs each course with selections that illuminate rather than overshadow.</p>
+          <span class="exp-link" data-target="menu-page">Wine List →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section section-pad">
+    <div class="wrap">
+      <div style="text-align:center; margin-bottom:0;">
+        <span class="eyebrow" data-reveal="fade">Guest Voices</span>
+        <h2 class="display-title" data-reveal="up" style="text-align:center;">Words That<br/><em>Honour Us</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-reveal="up" data-delay="0">
+          <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          <p class="t-quote">The lobster course alone justified the flight from London. Chef Moreau's restraint is extraordinary — every element earns its place on the plate.</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=60&w=100" alt="Portrait of guest Isabella Thornton"/>
+            <div>
+              <div class="t-name">Isabella Thornton</div>
+              <div class="t-origin">London, United Kingdom</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-reveal="up" data-delay="120">
+          <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          <p class="t-quote">We celebrated our anniversary here last autumn. The sommelier's pairings were as memorable as the food. A genuinely transformative evening.</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=60&w=100" alt="Portrait of guest Marc Hoffmann"/>
+            <div>
+              <div class="t-name">Marc &amp; Sophie Hoffmann</div>
+              <div class="t-origin">Geneva, Switzerland</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-reveal="up" data-delay="240">
+          <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          <p class="t-quote">I have dined at three-star restaurants across Europe. L'Étoile Dorée is the one I return to. The intimacy, the quiet confidence — it is something unto itself.</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=60&w=100" alt="Portrait of guest Takeshi Nakamura"/>
+            <div>
+              <div class="t-name">Takeshi Nakamura</div>
+              <div class="t-origin">Tokyo, Japan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION TEASER -->
+  <section class="reservation-section section-pad">
+    <div class="wrap reservation-inner">
+      <div class="reservation-card" data-reveal="scale">
+        <div style="text-align:center; margin-bottom:48px;">
+          <span class="eyebrow">Reserve Your Table</span>
+          <h2 class="display-title" style="text-align:center;">An Evening<br/><em>Awaits You</em></h2>
+          <div class="gold-rule center"></div>
+          <p class="body-text" style="margin:0 auto; text-align:center;">
+            We seat only 24 guests per evening. Tables are released 60 days in advance.
+          </p>
+        </div>
+        <form id="reservationForm" novalidate>
+          <div class="res-form-row">
+            <div class="form-field">
+              <label for="resName">Full Name</label>
+              <input id="resName" type="text" placeholder="Your name" required autocomplete="name"/>
+            </div>
+            <div class="form-field">
+              <label for="resEmail">Email Address</label>
+              <input id="resEmail" type="email" placeholder="your@email.com" required autocomplete="email"/>
+            </div>
+          </div>
+          <div class="res-form-row">
+            <div class="form-field">
+              <label for="resDate">Preferred Date</label>
+              <input id="resDate" type="date" required/>
+            </div>
+            <div class="form-field">
+              <label for="resTime">Preferred Seating</label>
+              <select id="resTime" required>
+                <option value="">Select a time</option>
+                <option>19:00 — First Seating</option>
+                <option>21:30 — Second Seating</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="resGuests">Number of Guests</label>
+            <select id="resGuests" required>
+              <option value="">Select guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5–8 Guests (Private Salon)</option>
+              <option>9–12 Guests (Exclusive Buyout)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-gold-full">Request a Table</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main><!-- end #home-page -->
+
+
+<!-- ══════════════════════════════════════════
+     MENU PAGE
+══════════════════════════════════════════ -->
+<div id="menu-page" class="page-view">
+  <div style="padding-top:120px;" class="section-pad">
+    <div class="wrap-wide">
+      <div style="text-align:center; margin-bottom:60px;">
+        <span class="eyebrow" data-reveal="fade">The Menu</span>
+        <h2 class="display-title" data-reveal="up" style="text-align:center;">Seasonal<br/><em>Tasting Menu</em></h2>
+        <div class="gold-rule center"></div>
+        <p class="body-text" style="margin:0 auto; text-align:center; margin-bottom:0;" data-reveal="up" data-delay="100">
+          Our menu changes with the season, the market, and the mood of the kitchen. What follows is our current offering.
+        </p>
+      </div>
+      <div class="menu-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="amuse">Amuse-Bouche</button>
+        <button class="filter-btn" data-filter="entree">Entrées</button>
+        <button class="filter-btn" data-filter="main">Plats Principaux</button>
+        <button class="filter-btn" data-filter="dessert">Desserts</button>
+        <button class="filter-btn" data-filter="wine">Wine Pairings</button>
+      </div>
+      <div class="dishes-grid">
+        <article class="dish-card" data-category="entree" data-reveal="up" data-delay="0">
+          <img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?q=80&w=800" alt="Scallop carpaccio with citrus"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Entrée</div>
+            <h3 class="dish-name">Scallop Carpaccio</h3>
+            <p class="dish-desc">Yuzu, micro shiso, avruga caviar, cold-pressed olive oil.</p>
+            <div class="dish-price"><span class="dish-price-val">€ 42</span><span class="dish-arrow">→</span></div>
+          </div>
+        </article>
+        <article class="dish-card" data-category="entree" data-reveal="up" data-delay="80">
+          <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=800" alt="Foie gras with quince"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Entrée · Signature</div>
+            <h3 class="dish-name">Terrine de Foie Gras</h3>
+            <p class="dish-desc">Quince gelée, brioche toastée, Sauternes reduction.</p>
+            <div class="dish-price"><span class="dish-price-val">€ 56</span><span class="dish-arrow">→</span></div>
+          </div>
+        </article>
+        <article class="dish-card" data-category="main" data-reveal="up" data-delay="160">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800" alt="Brittany Lobster"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Plat · Signature</div>
+            <h3 class="dish-name">Brittany Lobster</h3>
+            <p class="dish-desc">Saffron beurre blanc, sea vegetables, micro herbs.</p>
+            <div class="dish-price"><span class="dish-price-val">€ 88</span><span class="dish-arrow">→</span></div>
+          </div>
+        </article>
+        <article class="dish-card" data-category="main" data-reveal="up" data-delay="0">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=800" alt="Truffle dish"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Plat · Chef's Selection</div>
+            <h3 class="dish-name">Périgord Truffle</h3>
+            <p class="dish-desc">Comté, Jerusalem artichoke velouté, crisp rye wafer.</p>
+            <div class="dish-price"><span class="dish-price-val">€ 120</span><span class="dish-arrow">→</span></div>
+          </div>
+        </article>
+        <article class="dish-card" data-category="main" data-reveal="up" data-delay="80">
+          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=800" alt="Duck confit"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Plat · Classic</div>
+            <h3 class="dish-name">Landes Duck Confit</h3>
+            <p class="dish-desc">Fig gastrique, celeriac mousseline, caramelised shallot tatin.</p>
+            <div class="dish-price"><span class="dish-price-val">€ 64</span><span class="dish-arrow">→</span></div>
+          </div>
+        </article>
+        <article class="dish-card" data-category="dessert" data-reveal="up" data-delay="160">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=800" alt="Chocolate dessert"/>
+          <div class="dish-overlay"></div>
+          <div class="dish-info">
+            <div class="dish-label">Dessert</div>
+            <h3 class="dish-name">Valrhona Chocolate</h3>
+            <p class="dish-desc">Smoked caramel, salted butter ice cream, gold leaf.</p>
+            <div class="dish-price"><span class="dish-price-val">€ 28</span><span class="dish-arrow">→</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div><!-- end #menu-page -->
+
+
+<!-- ══════════════════════════════════════════
+     GALLERY PAGE
+══════════════════════════════════════════ -->
+<div id="gallery-page" class="page-view">
+  <div style="padding-top:120px;" class="section-pad">
+    <div class="wrap">
+      <div style="text-align:center; margin-bottom:72px;">
+        <span class="eyebrow" data-reveal="fade">Gallery</span>
+        <h2 class="display-title" data-reveal="up" style="text-align:center;">The World of<br/><em>L'Étoile Dorée</em></h2>
+        <div class="gold-rule center"></div>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200" data-reveal="fade">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=60&w=600" alt="The main dining room at L'Étoile Dorée — evening ambiance with candlelight"/>
+          <div class="gallery-item-overlay"><div class="gallery-zoom-icon"><i class="fa fa-expand"></i></div></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200" data-reveal="fade" data-delay="60">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=60&w=600" alt="Plated dish — precision French cuisine"/>
+          <div class="gallery-item-overlay"><div class="gallery-zoom-icon"><i class="fa fa-expand"></i></div></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1200" data-reveal="fade" data-delay="120">
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=60&w=600" alt="The private cellar and wine collection"/>
+          <div class="gallery-item-overlay"><div class="gallery-zoom-icon"><i class="fa fa-expand"></i></div></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1200" data-reveal="fade" data-delay="30">
+          <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=60&w=600" alt="Chef at work in the kitchen"/>
+          <div class="gallery-item-overlay"><div class="gallery-zoom-icon"><i class="fa fa-expand"></i></div></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200" data-reveal="fade" data-delay="90">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=60&w=600" alt="Brittany lobster — house signature dish"/>
+          <div class="gallery-item-overlay"><div class="gallery-zoom-icon"><i class="fa fa-expand"></i></div></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?q=80&w=1200" data-reveal="fade" data-delay="150">
+          <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?q=60&w=600" alt="Sommelier presenting a vintage Burgundy"/>
+          <div class="gallery-item-overlay"><div class="gallery-zoom-icon"><i class="fa fa-expand"></i></div></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200" data-reveal="fade" data-delay="60">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=60&w=600" alt="Valrhona chocolate dessert plating"/>
+          <div class="gallery-item-overlay"><div class="gallery-zoom-icon"><i class="fa fa-expand"></i></div></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200" data-reveal="fade" data-delay="120">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=60&w=600" alt="The bar and lounge area at L'Étoile Dorée"/>
+          <div class="gallery-item-overlay"><div class="gallery-zoom-icon"><i class="fa fa-expand"></i></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- end #gallery-page -->
+
+
+<!-- ══════════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════════ -->
+<div id="about-page" class="page-view">
+  <div style="padding-top:120px;" class="section-pad">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-visual">
+          <img data-reveal="left"
+               class="about-img-main"
+               src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=900"
+               alt="The dining room of L'Étoile Dorée, 1987 restoration"/>
+          <div class="about-badge">
+            <strong data-count="37" data-suffix="">0</strong>
+            <span>Years in Paris</span>
+          </div>
+        </div>
+        <div class="about-text-block">
+          <span class="eyebrow" data-reveal="fade">Our Story</span>
+          <h2 class="display-title" data-reveal="up">Three Decades<br/><em>of Quiet Excellence</em></h2>
+          <div class="gold-rule"></div>
+          <p class="body-text" data-reveal="up" data-delay="100">
+            L'Étoile Dorée opened in 1987, a small room on Rue du Faubourg Saint-Honoré with fourteen covers and an unwavering commitment to market-led French cuisine. The founders, Bernard and Céleste Moreau, believed that a restaurant should feel like a home — one where the cooking is extraordinary and the welcome is genuine.
+          </p>
+          <blockquote class="about-pull-quote" data-reveal="right" data-delay="160">
+            "We didn't open a restaurant. We opened a room where people could feel what food is capable of."<br/>
+            <cite style="font-size:.75rem; letter-spacing:.1em; color:var(--text-muted);">— Bernard Moreau, Founder</cite>
+          </blockquote>
+          <p class="body-text" data-reveal="up" data-delay="200">
+            In 2012, their son Julien assumed the role of Executive Chef, earning the restaurant its second Michelin star the following year. The philosophy has never changed. The ambition has only deepened.
+          </p>
+          <div class="awards-row" data-reveal="up" data-delay="260">
+            <span class="award-chip">✦ 2 Michelin Stars</span>
+            <span class="award-chip">Gault &amp; Millau 19/20</span>
+            <span class="award-chip">Best Wine List — 2024</span>
+            <span class="award-chip">Top 50 Europe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- end #about-page -->
+
+
+<!-- ══════════════════════════════════════════
+     CONTACT PAGE
+══════════════════════════════════════════ -->
+<div id="contact-page" class="page-view">
+  <div class="contact-section section-pad" style="padding-top:160px;">
+    <div class="wrap">
+      <div style="margin-bottom:72px;">
+        <span class="eyebrow" data-reveal="fade">Find Us</span>
+        <h2 class="display-title" data-reveal="up">Come & <em>Visit Us</em></h2>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info-item" data-reveal="left">
+            <div class="contact-info-icon"><i class="fa fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-info-label">Address</div>
+              <div class="contact-info-val">12 Rue du Faubourg Saint-Honoré<br/>75008 Paris, France</div>
+            </div>
+          </div>
+          <div class="contact-info-item" data-reveal="left" data-delay="80">
+            <div class="contact-info-icon"><i class="fa fa-phone"></i></div>
+            <div>
+              <div class="contact-info-label">Reservations</div>
+              <div class="contact-info-val">+33 (0)1 42 65 00 00</div>
+            </div>
+          </div>
+          <div class="contact-info-item" data-reveal="left" data-delay="160">
+            <div class="contact-info-icon"><i class="fa fa-envelope"></i></div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-val">bonjour@letoile-doree.fr</div>
+            </div>
+          </div>
+          <div class="contact-info-item" data-reveal="left" data-delay="240">
+            <div class="contact-info-icon"><i class="fa fa-clock"></i></div>
+            <div>
+              <div class="contact-info-label">Opening Hours</div>
+              <div class="contact-info-val">Tuesday – Saturday<br/>19:00 – 23:00<br/><span style="color:var(--gold); font-size:.78rem;">Closed Sunday & Monday</span></div>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="right">
+          <div class="map-placeholder">
+            <i class="fa fa-map-pin" style="color:var(--gold); font-size:2rem;"></i>
+            <span>Paris VIII · Rue du Faubourg Saint-Honoré</span>
+            <span style="font-size:.65rem; color:var(--gold);">Map available at the link below</span>
+            <a href="https://maps.google.com/?q=Rue+du+Faubourg+Saint-Honoré+Paris" target="_blank" rel="noopener" class="btn-ghost-light" style="margin-top:12px; font-size:.65rem;">
+              Open in Google Maps →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- end #contact-page -->
+
+
+<!-- ══════════════════════════════════════════
+     RESERVATION PAGE
+══════════════════════════════════════════ -->
+<div id="reservation-page" class="page-view">
+  <section class="reservation-section section-pad" style="padding-top:160px; min-height:100svh;">
+    <div class="wrap reservation-inner">
+      <div class="reservation-card" data-reveal="scale">
+        <div style="text-align:center; margin-bottom:48px;">
+          <span class="eyebrow">Reserve a Table</span>
+          <h2 class="display-title" style="text-align:center;">Your Evening<br/><em>Begins Here</em></h2>
+          <div class="gold-rule center"></div>
+          <p class="body-text" style="margin:0 auto; text-align:center;">
+            We seat only 24 guests per evening. Tables are released 60 days in advance and reserved upon confirmation of deposit.
+          </p>
+        </div>
+        <form id="reservationForm" novalidate>
+          <div class="res-form-row">
+            <div class="form-field">
+              <label for="resName2">Full Name</label>
+              <input id="resName2" type="text" placeholder="Your name" required autocomplete="name"/>
+            </div>
+            <div class="form-field">
+              <label for="resEmail2">Email Address</label>
+              <input id="resEmail2" type="email" placeholder="your@email.com" required autocomplete="email"/>
+            </div>
+          </div>
+          <div class="res-form-row">
+            <div class="form-field">
+              <label for="resDate2">Preferred Date</label>
+              <input id="resDate2" type="date" required/>
+            </div>
+            <div class="form-field">
+              <label for="resTime2">Preferred Seating</label>
+              <select id="resTime2" required>
+                <option value="">Select a time</option>
+                <option>19:00 — First Seating</option>
+                <option>21:30 — Second Seating</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="resGuests2">Number of Guests</label>
+            <select id="resGuests2" required>
+              <option value="">Select guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5–8 Guests (Private Salon)</option>
+              <option>9–12 Guests (Exclusive Buyout)</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="resNotes2">Special Requests or Dietary Notes</label>
+            <input id="resNotes2" type="text" placeholder="Allergies, celebrations, preferences…"/>
+          </div>
+          <button type="submit" class="btn-gold-full">Request a Table</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div><!-- end #reservation-page -->
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap-wide">
+    <div class="footer-top">
+      <!-- Brand col -->
+      <div>
+        <span class="footer-brand-logo">L'<span style="color:var(--gold)">Étoile</span> Dorée</span>
+        <p class="footer-tagline">An intimate sanctuary of elevated French gastronomy at the heart of the 8th arrondissement. Twenty-four covers. No exceptions.</p>
+        <div class="footer-newsletter">
+          <span class="newsletter-label">Receive seasonal menus &amp; private events</span>
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <input class="newsletter-input" type="email" placeholder="your@email.com" required aria-label="Email for newsletter"/>
+            <button class="newsletter-btn" type="submit" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+
+      <!-- Hours col -->
+      <div>
+        <h3 class="footer-col-title">Opening Hours</h3>
+        <ul class="footer-list">
+          <li>Tuesday – Thursday<br/><span style="color:#fff">19:00 – 22:30</span></li>
+          <li>Friday – Saturday<br/><span style="color:#fff">19:00 – 23:00</span></li>
+          <li>Sunday – Monday<br/><span style="color:rgba(255,255,255,.55); font-style:italic;">Closed</span></li>
+        </ul>
+        <p class="footer-hours-note">Private events available on Sundays by arrangement.</p>
+      </div>
+
+      <!-- Nav col -->
+      <div>
+        <h3 class="footer-col-title">Navigate</h3>
+        <ul class="footer-list">
+          <li><a data-target="home-page" href="#">Home</a></li>
+          <li><a data-target="menu-page" href="#">Tasting Menu</a></li>
+          <li><a data-target="gallery-page" href="#">Gallery</a></li>
+          <li><a data-target="about-page" href="#">Our Story</a></li>
+          <li><a data-target="reservation-page" href="#">Reserve a Table</a></li>
+          <li><a data-target="contact-page" href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Instagram col -->
+      <div>
+        <h3 class="footer-col-title">From Instagram</h3>
+        <div class="footer-insta-grid">
+          <a href="#" class="insta-thumb" aria-label="Instagram post 1">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=60&w=200" alt="Fine dining plate from our Instagram"/>
+          </a>
+          <a href="#" class="insta-thumb" aria-label="Instagram post 2">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=60&w=200" alt="Lobster dish from our Instagram"/>
+          </a>
+          <a href="#" class="insta-thumb" aria-label="Instagram post 3">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=60&w=200" alt="Truffle dish from our Instagram"/>
+          </a>
+          <a href="#" class="insta-thumb" aria-label="Instagram post 4">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=60&w=200" alt="Dining room from our Instagram"/>
+          </a>
+          <a href="#" class="insta-thumb" aria-label="Instagram post 5">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=60&w=200" alt="Chocolate dessert from our Instagram"/>
+          </a>
+          <a href="#" class="insta-thumb" aria-label="Instagram post 6">
+            <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?q=60&w=200" alt="Wine service from our Instagram"/>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 L'Étoile Dorée · All rights reserved · Paris VIII</p>
+      <div class="footer-awards">
+        <span class="footer-award">✦ 2 Michelin Stars</span>
+        <span class="footer-award">Gault &amp; Millau 19/20</span>
+        <span class="footer-award">Top 50 Europe 2024</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
